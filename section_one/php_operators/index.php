@@ -79,3 +79,61 @@ $nCE = $nCD ?? 'hello';
 var_dump($nCE);
 
 //$nCE will equal 'bye'
+
+// ***** ERROR CONTROL OPERATOR (@) ***************************************************************
+
+// @ will supress an error.
+
+// $erX = file('foo.txt'); // file reads a file. will error as file does not exist
+
+// $erY = @file('foo.txt'); // error is supressed and code will work. but still an error
+
+// ***** INCREMENT / DECREMENT OPERATORS (++, --) ******************************************
+
+$idX = 5;
+
+// post increment
+
+echo $idX++; // will echo 5 and then ++
+echo $idX; // will now echo 6
+
+// pre increment 
+echo ++$idX; // will echo 6 as it ++ first then return value of idX
+
+// ***** LOGICAL OPERATORS (&& || ! and or xor ) ******************************************************
+
+// && and
+
+// || or
+
+// ! not
+
+// and or xor - same but different precendence
+
+// short circuting also works
+
+// ***** BITWISE OPERATORS (& | ^ ~ << >>)
+
+// changes bits between 1 and 0. binary
+
+// see php operators pt 2 https://youtu.be/gCVlQdbddXY?t=538
+
+// ARRAY OPERATORS (+ == === != <> !==)
+
+$arrX = ['a', 'b', 'c'];
+$arrY = ['d', 'e', 'f'];
+
+$arrZ = $arrX + $arrY; // will equal arrX because of element index will overide. 
+// if array is assciated array (js object) then arrZ will include all data unless ther is matching keys.
+
+// ===. will only return true if the key value pairs match.
+
+// ***** EXECUTION OPERATORS (``) ***************************************************
+
+// `` not really needed see video https://youtu.be/gCVlQdbddXY?t=946
+
+// last two deal with classes
+
+// ***** TYPE OPERATORS (INSTANCEOF) ********************************************************
+
+// ***** NULLSAFE OPERATORS - PHP8 (?)
