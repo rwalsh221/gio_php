@@ -1,14 +1,13 @@
 <?php
 declare(strict_types=1);
 
-// CLASSES AND OBJECTS
-require_once '../Tansaction.php';
+// STATIC PROPERTIES AND METHODS
+use App\Enums\Status;
+use App\PaymentGateway\Paddle\Transaction;
 
-$amount = (new Transaction(100, 'decription'))
-->addTax(9)
-->applyDiscount(10)
-->getAmount(); // chained methods
 
-var_dump($amount);
+require_once __DIR__ . '/../vendor/autoload.php';
 
-// nullsafe oprerator https://youtu.be/T1PbFz-o6kw
+$transaction =  new Transaction(925, 'Transaction 1');
+
+var_dump($transaction::$count);
